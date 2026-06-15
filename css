@@ -1,0 +1,144 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #eef2ff;
+    min-height: 100vh;
+    padding: 30px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.container {
+    background-color: white;
+    padding: 35px;
+    border-radius: 14px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+    width: 520px;
+}
+
+.header { text-align: center; margin-bottom: 25px; }
+.header h1 { color: #2d3a8c; font-size: 1.6em; margin-bottom: 5px; }
+.header p { color: #888; font-size: 0.9em; }
+
+.nav {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 28px;
+    flex-wrap: wrap;
+}
+
+.nav a {
+    padding: 9px 18px;
+    background-color: #e8ecff;
+    color: #eeeeee;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 0.88em;
+    font-weight: bold;
+    border: 2px solid transparent;
+    transition: all 0.2s;
+}
+
+.nav a:hover, .nav a.actif {
+    background-color: #2d3a8c;
+    color: white;
+}
+
+label { display: block; margin-bottom: 6px; color: #444; font-weight: bold; font-size: 0.95em; }
+
+input[type="text"], select {
+    width: 100%; padding: 11px 14px; margin-bottom: 16px;
+    border: 2px solid #dde0f0; border-radius: 8px;
+    font-size: 1em; color: #333; transition: border-color 0.2s;
+}
+
+input[type="text"]:focus, select:focus { outline: none; border-color: #2d3a8c; }
+
+.row { display: flex; gap: 12px; }
+.row > div { flex: 1; }
+
+button {
+    width: 100%; padding: 13px;
+    background-color: #7a7a7a; color: white;
+    border: none; border-radius: 8px;
+    font-size: 1em; font-weight: bold;
+    cursor: pointer; margin-bottom: 12px;
+    transition: background-color 0.2s;
+}
+
+button:hover { background-color: #1a2460; }
+button.secondaire { background-color: #28a745; }
+button.secondaire:hover { background-color: #1e7e34; }
+
+.message {
+    padding: 10px 14px; border-radius: 8px;
+    text-align: center; margin: 10px 0;
+    font-weight: bold; display: none;
+}
+
+.message.erreur { background-color: #ffe0e0; color: #cf1b06; display: block; }
+.message.succes { background-color: #e0ffe6; color: #000802; display: block; }
+
+.separateur { border: none; border-top: 2px solid #eee; margin: 20px 0; }
+
+.liste-medicaments { list-style: none; margin-top: 10px; }
+
+.liste-medicaments li {
+    display: flex; align-items: center; gap: 10px;
+    padding: 11px 14px;
+    background-color: #f8f9ff;
+    border: 1px solid #dde0f0;
+    border-radius: 8px; margin-bottom: 8px;
+    color: #333; font-size: 0.95em;
+}
+
+.liste-medicaments li::before { content: 'medicament'; color: #2d3a8c; font-weight: bold; }
+
+.bloc-prescriptions { margin-top: 20px; display: none; }
+.titre-bloc { font-weight: bold; color: #2d3a8c; margin-bottom: 12px; font-size: 0.95em; }
+
+.medicament-item {
+    display: flex; align-items: center; gap: 12px;
+    padding: 11px 14px;
+    background-color: #f8f9ff;
+    border: 2px solid #dde0f0;
+    border-radius: 8px; margin-bottom: 8px;
+    cursor: pointer; transition: border-color 0.2s;
+}
+
+.medicament-item:hover { border-color: #2d3a8c; }
+
+.medicament-item input[type="checkbox"] {
+    width: 18px; height: 18px; margin: 0;
+    cursor: pointer; accent-color: #2d3a8c;
+}
+
+.medicament-item label {
+    margin: 0; font-weight: normal;
+    cursor: pointer; font-size: 0.95em; color: #333;
+}
+
+.titre-resultat {
+    background-color: #2d3a8c; color: white;
+    padding: 12px 16px; border-radius: 8px;
+    margin-top: 20px; text-align: center;
+    font-weight: bold; font-size: 0.95em;
+}
+
+.liste-resultat { list-style: none; margin-top: 10px; }
+
+.liste-resultat li {
+    display: flex; align-items: center; gap: 10px;
+    padding: 12px 16px;
+    background-color: #f0f4ff;
+    border-left: 4px solid #2d3a8c;
+    border-radius: 6px; margin-bottom: 8px;
+    color: #222; font-size: 1em; font-weight: bold;
+}
+
+.liste-resultat li::before { content: 'medicament :'; color: #2d3a8c; }
+.vide { text-align: center; color: #aaa; padding: 20px; font-style: italic; font-size: 0.95em; }
+.badge { display: inline-block; background-color: #2d3a8c; color: white; border-radius: 12px; padding: 2px 10px; font-size: 0.8em; margin-left: 8px;}
