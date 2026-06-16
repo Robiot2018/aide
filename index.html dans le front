@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Stock - Entree</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Gestion de Stock</h1>
+            <p>Rentrer un produit dans le stock</p>
+        </div>
+        <nav class="nav">
+            <a href="index.html" class="actif">Entree stock</a>
+            <a href="sortie.html">Sortie stock</a>
+            <a href="evolution.html">Evolution stock</a>
+        </nav>
+        <label for="nom">Nom du produit</label>
+        <input type="text" id="nom" placeholder="Ex : Stylos, Papier A4...">
+        <label for="quantite">Quantite a rentrer</label>
+        <input type="number" id="quantite" placeholder="Ex : 10" min="1">
+        <button id="btn-entree">+ Rentrer dans le stock</button>
+        <div id="message" class="message"></div>
+        <hr class="separateur">
+        <p style="color:#888; font-size:0.85em; text-align:center;">
+            Si le produit existe deja, la quantite sera ajoutee au stock existant.
+            Sinon, un nouveau produit sera cree.
+        </p>
+    </div>
+    <script src="entree.js"></script>
+</body>
+</html>
